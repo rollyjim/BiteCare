@@ -1,0 +1,317 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #f4f6f9;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PROFILE TOGGLE BUTTON */
+.profile-toggle button {
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.profile-toggle button:hover {
+    background: #a00000;
+}
+
+/* PROFILE INFO HIDDEN */
+.profile-hidden {
+    display: none;
+    background: white;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar-profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #b30000;
+    margin-bottom: 10px;
+}
+
+.profile-details h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.profile-details p {
+    font-size: 13px;
+    margin-bottom: 3px;
+    opacity: 0.8;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    padding-left: 0;
+    flex-grow: 1;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TOPBAR */
+.topbar h1 {
+    color: #b30000;
+    margin-bottom: 25px;
+}
+
+/* TOP CONTROLS */
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    max-width: 350px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.search-box button {
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #800000;
+}
+
+/* FILTER BUTTONS */
+.filter-buttons a {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #333;
+    background: #e0e0e0;
+    transition: 0.3s;
+}
+
+.filter-buttons a.active-filter {
+    background: #b30000;
+    color: white;
+}
+
+/* ================= TABLE ================= */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border: none; /* HIDE BORDERS */
+    font-size: 14px;
+}
+
+/* REMOVE DEFAULT TABLE BORDER */
+.users-table {
+    border: none;
+}
+
+.users-table thead tr {
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* INPUT FIELDS IN TABLE */
+.edit-input {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+/* STATUS BADGES */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status-badge.active {
+    background: #d4edda;
+    color: #006600;
+}
+
+.status-badge.inactive {
+    background: #ffe6e6;
+    color: #990000;
+}
+
+/* ACTION BUTTONS */
+.actions-col .btn {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: 0.3s;
+    border: none;
+    color: #000; /* ICONS/Texts Black */
+}
+
+.save-btn {
+    background: #b30000;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #800000;
+}
+
+.activate-btn {
+    background: #d4edda;
+    color: #006600;
+}
+
+.deactivate-btn {
+    background: #ffe6e6;
+    color: #990000;
+}
+
+.delete-btn {
+    background: #f5f5f5;
+    color: #000;
+}
+
+.delete-btn:hover {
+    background: #ffcccc;
+}
+
+/* PAGINATION */
+.pagination {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.pagination a {
+    padding: 6px 12px;
+    margin-left: 5px;
+    text-decoration: none;
+    border-radius: 6px;
+    background: #e0e0e0;
+    color: #333;
+    transition: 0.3s;
+}
+
+.pagination a:hover {
+    background: #b30000;
+    color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .top-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter-buttons {
+        margin-top: 10px;
+    }
+
+    .users-table th,
+    .users-table td {
+        font-size: 13px;
+    }
+}

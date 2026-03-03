@@ -1,0 +1,291 @@
+/* =========================
+   RESET & GLOBAL STYLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-section h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.profile-section .role {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.profile-section p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.topbar {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.topbar h2 {
+    color: #b30000;
+    font-size: 26px;
+}
+
+.topbar p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* =========================
+   SCHEDULE FORM
+========================= */
+.schedule-form,
+.reschedule-form {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.schedule-form label,
+.reschedule-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #b30000;
+    font-size: 14px;
+}
+
+.schedule-form input,
+.schedule-form textarea,
+.reschedule-form input,
+.reschedule-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.schedule-form button,
+.reschedule-form button {
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.schedule-form button:hover,
+.reschedule-form button:hover {
+    background: #800000;
+}
+
+/* =========================
+   APPOINTMENT CARDS
+========================= */
+.appointments-list .appointment-card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.appointments-list .appointment-card p {
+    margin: 8px 0;
+}
+
+.appointments-list .cancel-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    background: #ff4b5c;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.appointments-list .cancel-btn:hover {
+    background: #d03b4b;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+.success-message {
+    background: #e6ffe6;
+    color: #006600;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        height: 100%;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .topbar h2 {
+        font-size: 22px;
+    }
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #b30000;
+    cursor: pointer;
+}
+
+/* MOBILE SIDEBAR STYLE */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        width: 240px;
+        background: #b30000;
+        z-index: 1000;
+        transition: 0.3s ease;
+        flex-direction: column;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .profile-section {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main {
+        width: 100%;
+    }
+}

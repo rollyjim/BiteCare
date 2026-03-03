@@ -1,0 +1,92 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== DASHBOARD CARD ===== */
+.dashboard {
+    width: 420px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ===== HEADINGS ===== */
+.dashboard h1 {
+    text-align: center;
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.dashboard h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* ===== LIST ===== */
+.dashboard ul {
+    list-style: none;
+}
+
+.dashboard ul li {
+    background: #fdecea;
+    color: #333;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #c0392b;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.dashboard ul li:hover {
+    background: #f9d6d3;
+    transform: translateX(5px);
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.logout {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    background: #c0392b;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.logout:hover {
+    background: #a93226;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

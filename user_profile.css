@@ -1,0 +1,268 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+    background: #f4f6f9;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PROFILE SECTION */
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-section h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.profile-section .role {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.profile-section p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TOPBAR */
+.topbar {
+    margin-bottom: 25px;
+}
+
+.topbar h1 {
+    color: #b30000;
+    font-size: 26px;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* SUCCESS MESSAGE */
+.success-msg {
+    background: #e6ffe6;
+    color: #006600;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* PROFILE PICTURE */
+.profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #b30000;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.05);
+}
+
+/* UPLOAD FORM */
+.upload-form {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.upload-form input {
+    margin-bottom: 10px;
+}
+
+.upload-form button {
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.upload-form button:hover {
+    background: #800000;
+}
+
+/* PROFILE DETAILS */
+.profile-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.profile-item {
+    background: #fafafa;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.profile-item .label {
+    font-weight: 600;
+    color: #b30000;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main {
+        padding: 20px;
+    }
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #b30000;
+    cursor: pointer;
+}
+
+/* MOBILE SIDEBAR STYLE */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        width: 240px;
+        background: #b30000;
+        z-index: 1000;
+        transition: 0.3s ease;
+        flex-direction: column;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .profile-section {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main {
+        width: 100%;
+    }
+}

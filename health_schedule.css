@@ -1,0 +1,228 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #f4f6f9;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PROFILE TOGGLE BUTTON */
+.profile-toggle button {
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.profile-toggle button:hover {
+    background: #a00000;
+}
+
+/* PROFILE INFO */
+.profile-hidden {
+    display: none;
+    background: white;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar-profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #b30000;
+    margin-bottom: 10px;
+}
+
+.profile-details h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.profile-details p {
+    font-size: 13px;
+    margin-bottom: 3px;
+    opacity: 0.8;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    padding-left: 0;
+    flex-grow: 1;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TOPBAR */
+.topbar h1 {
+    color: #b30000;
+    margin-bottom: 25px;
+}
+
+/* FILTER FORM */
+.filter-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-form input[type="text"] {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+    font-size: 14px;
+}
+
+.filter-form button {
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-form button:hover {
+    background: #800000;
+}
+
+/* TABLE STYLING */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.schedule-table thead tr {
+    background: #b30000;
+    color: white;
+    text-align: left;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px 10px;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.schedule-table tbody tr:hover {
+    background: #ffe6e6;
+}
+
+/* STATUS SELECT */
+.schedule-table select {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* MARK COMPLETED BUTTON */
+.schedule-table button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.schedule-table button:hover {
+    opacity: 0.85;
+}
+
+/* PAGINATION */
+.pagination {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    margin: 0 4px;
+    padding: 8px 12px;
+    background: white;
+    color: #b30000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.pagination a.active-page,
+.pagination a:hover {
+    background: #b30000;
+    color: white;
+}

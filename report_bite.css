@@ -1,0 +1,302 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-section h3 {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.profile-section .role {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.profile-section p {
+    font-size: 12px;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+/* ================= MAIN ================= */
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TOPBAR */
+.topbar {
+    margin-bottom: 20px;
+}
+
+.topbar h1 {
+    color: #b30000;
+    font-size: 26px;
+}
+
+/* MESSAGE */
+.message {
+    background: #e6ffe6;
+    color: #006600;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* ================= FORM CARD ================= */
+
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #b30000;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #b30000;
+    box-shadow: 0 0 0 2px rgba(179, 0, 0, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+    margin-top: 20px;
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #800000;
+    transform: translateY(-2px);
+}
+
+/* ================= REPORT CARDS ================= */
+
+h3 {
+    color: #b30000;
+    margin-bottom: 15px;
+}
+
+.report-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    font-size: 14px;
+}
+
+.report-card p {
+    margin-bottom: 6px;
+}
+
+.report-photo {
+    width: 120px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 2px solid #b30000;
+}
+
+/* CANCEL BUTTON */
+.cancel-btn {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #ffcccc;
+    color: #b30000;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #b30000;
+    color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .report-card {
+        padding: 15px;
+    }
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #b30000;
+    cursor: pointer;
+}
+
+/* MOBILE SIDEBAR STYLE */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        width: 240px;
+        background: #b30000;
+        z-index: 1000;
+        transition: 0.3s ease;
+        flex-direction: column;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .profile-section {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main {
+        width: 100%;
+    }
+}

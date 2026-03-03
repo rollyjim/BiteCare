@@ -1,0 +1,201 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #f4f6f9;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PROFILE TOGGLE BUTTON */
+.profile-toggle button {
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.profile-toggle button:hover {
+    background: #a00000;
+}
+
+/* PROFILE INFO HIDDEN */
+.profile-hidden {
+    display: none;
+    background: white;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar-profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #b30000;
+    margin-bottom: 10px;
+}
+
+.profile-hidden h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.profile-hidden p {
+    font-size: 13px;
+    margin-bottom: 3px;
+    opacity: 0.8;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    padding-left: 0;
+    flex-grow: 1;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TOPBAR */
+.topbar h1 {
+    color: #b30000;
+    margin-bottom: 25px;
+}
+
+/* ================= PROFILE CARD ================= */
+.profile-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.success-msg {
+    background: #e6ffe6;
+    color: #006600;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* LARGE PROFILE IMAGE */
+.profile-img-large {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #b30000;
+    margin-bottom: 20px;
+}
+
+/* UPLOAD BUTTON */
+.profile-card form input[type="file"] {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.profile-card form button {
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.profile-card form button:hover {
+    background: #800000;
+}
+
+/* PROFILE INFO */
+.profile-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.profile-info p strong {
+    color: #b30000;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .menu li a {
+        margin-right: 10px;
+    }
+}

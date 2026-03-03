@@ -1,0 +1,230 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-section h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.profile-section .role {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+/* MAIN CONTENT */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.topbar {
+    margin-bottom: 25px;
+}
+
+.topbar h2 {
+    color: #b30000;
+    font-size: 26px;
+}
+
+.topbar p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* DSS FORM */
+.dss-form {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.dss-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #b30000;
+}
+
+.dss-form select,
+.dss-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.submit-btn {
+    margin-top: 15px;
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #800000;
+}
+
+/* DSS RESULT */
+.dss-result {
+    margin-top: 20px;
+    background: #e6ffe6;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.dss-result h3 {
+    color: #b30000;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main {
+        padding: 20px;
+    }
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #b30000;
+    cursor: pointer;
+}
+
+/* MOBILE SIDEBAR STYLE */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        width: 240px;
+        background: #b30000;
+        z-index: 1000;
+        transition: 0.3s ease;
+        flex-direction: column;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .profile-section {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main {
+        width: 100%;
+    }
+}

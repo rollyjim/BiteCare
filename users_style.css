@@ -1,0 +1,276 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+.profile-section h3 {
+    font-size: 18px;
+}
+
+.profile-section .role {
+    font-size: 13px;
+    opacity: 0.8;
+    margin: 4px 0;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    font-size: 24px;
+    color: #b30000;
+}
+
+/* Notification */
+.notif-icon {
+    position: relative;
+    font-size: 20px;
+    color: #b30000;
+    text-decoration: none;
+}
+
+.notif-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #ff0000;
+    color: white;
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+/* ================= DASHBOARD CARDS ================= */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.dashboard-card i {
+    font-size: 30px;
+    color: #b30000;
+    margin-bottom: 10px;
+}
+
+.dashboard-card span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background: #b30000;
+    color: white;
+}
+
+.dashboard-card:hover i {
+    color: white;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 220px;
+        padding: 20px 10px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .profile-section {
+        display: none; /* hide profile on small screens */
+    }
+
+    .menu {
+        display: flex;
+        gap: 10px;
+    }
+
+    .menu li {
+        margin-bottom: 0;
+    }
+
+    .menu a {
+        padding: 8px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    .topbar h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+    }
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #b30000;
+    cursor: pointer;
+}
+
+/* MOBILE SIDEBAR STYLE */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        width: 240px;
+        background: #b30000;
+        z-index: 1000;
+        transition: 0.3s ease;
+        flex-direction: column;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .profile-section {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main {
+        width: 100%;
+    }
+}

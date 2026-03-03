@@ -1,0 +1,314 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #f4f6f9;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PROFILE TOGGLE BUTTON */
+.profile-toggle button {
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.profile-toggle button:hover {
+    background: #a00000;
+}
+
+/* PROFILE INFO HIDDEN */
+.profile-hidden {
+    display: none;
+    background: white;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar-profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #b30000;
+    margin-bottom: 10px;
+}
+
+.profile-details h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.profile-details p {
+    font-size: 13px;
+    margin-bottom: 3px;
+    opacity: 0.8;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    padding-left: 0;
+    flex-grow: 1;
+}
+
+.menu li {
+    margin-bottom: 8px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+/* ================= MAIN ================= */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TOPBAR */
+.topbar h1 {
+    color: #b30000;
+    margin-bottom: 25px;
+}
+
+/* ================= SEARCH & FILTER FORM ================= */
+.filter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-form input[type="text"],
+.filter-form select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.filter-form button {
+    padding: 10px 20px;
+    border: none;
+    background: #b30000;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-form button:hover {
+    background: #800000;
+}
+
+/* ================= TABLE ================= */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow-x: auto;
+}
+
+.bite-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bite-table th,
+.bite-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Hide default table borders */
+.bite-table th,
+.bite-table td {
+    border: none;
+}
+
+.bite-table th {
+    background: #f1f1f1;
+    color: #333;
+    font-weight: 600;
+}
+
+.bite-table tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* ================= SEVERITY & STATUS BADGES ================= */
+.severity-High {
+    color: white;
+    background: #e74c3c;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.severity-Medium {
+    color: white;
+    background: #f39c12;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.severity-Low {
+    color: white;
+    background: #27ae60;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.status-Pending {
+    color: #d35400;
+    font-weight: 600;
+}
+
+.status-Treated {
+    color: #2980b9;
+    font-weight: 600;
+}
+
+.status-Closed {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.actions a {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    margin-right: 5px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.mark-btn {
+    background: #b30000;
+}
+
+.mark-btn:hover {
+    background: #b30000;
+}
+
+.delete-btn {
+    background: #e74c3c;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* ================= PAGINATION ================= */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 3px;
+    background: white;
+    color: #b30000;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.pagination a.active-page {
+    background: #b30000;
+    color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
+
+    .menu li {
+        margin-right: 10px;
+    }
+
+    .filter-form {
+        flex-direction: column;
+    }
+
+    .filter-form input,
+    .filter-form select,
+    .filter-form button {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+}

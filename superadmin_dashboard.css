@@ -1,0 +1,245 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+    background: #f4f6f9;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 260px;
+    background: #b30000;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SIDEBAR PROFILE */
+.sidebar-profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.sidebar-profile h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+
+.sidebar-profile p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* SIDEBAR MENU */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.menu a.active,
+.menu a:hover {
+    background: white;
+    color: #b30000;
+    font-weight: 600;
+}
+
+.menu a.logout {
+    margin-top: auto;
+    background: #800000;
+    text-align: center;
+}
+
+.menu a.logout:hover {
+    background: #ff1a1a;
+    color: white;
+}
+
+/* ================= MAIN CONTENT ================= */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TOP HEADER */
+.top-header h1 {
+    font-size: 26px;
+    color: #b30000;
+    margin-bottom: 25px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+/* ALERTS */
+.alert-success {
+    background: #e6ffe6;
+    color: #006600;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* SEARCH BOX */
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    background: #b30000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #800000;
+}
+
+/* ================= TABLES ================= */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none; /* Remove table borders */
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 14px;
+    border: none; /* Remove cell borders */
+}
+
+th {
+    background: #b30000;
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* ================= ACTION ICONS ================= */
+.btn-edit,
+.btn-convert,
+.btn-delete {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 14px;
+    color: black; /* Black icons */
+    background: transparent; /* Remove colored background */
+    margin-right: 5px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-edit:hover,
+.btn-convert:hover,
+.btn-delete:hover {
+    color: #b30000; /* Red hover effect */
+    background: #f0f0f0; /* Light hover background */
+}
+
+/* TOGGLE BUTTONS */
+.toggle-btn {
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #800000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 15px;
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    table th, table td {
+        font-size: 13px;
+    }
+
+    .toggle-btn {
+        font-size: 12px;
+    }
+}

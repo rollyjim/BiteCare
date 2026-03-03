@@ -1,0 +1,151 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Card */
+.container {
+    background: #ffffff;
+    width: 95%;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #b30000;
+    font-size: 24px;
+}
+
+/* Success Message */
+.success {
+    background: #e6ffe6;
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Form */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.edit-form label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Inputs & Select */
+.edit-form input,
+.edit-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+    border-color: #b30000;
+    outline: none;
+    box-shadow: 0 0 4px rgba(179, 0, 0, 0.3);
+}
+
+/* Buttons */
+.btn {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    background: #b30000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #e60000;
+}
+
+/* Back Button */
+.btn-back {
+    display: inline-block;
+    margin-top: 10px;
+    background: #555;
+}
+
+.btn-back:hover {
+    background: #333;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .edit-form input,
+    .edit-form select {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .container h1 {
+        font-size: 18px;
+    }
+
+    .edit-form label {
+        font-size: 13px;
+    }
+}
